@@ -1,0 +1,1 @@
+var scheduleApp = angular.module('gameApp', ['gameControllers','gameServices', 'firebase']);

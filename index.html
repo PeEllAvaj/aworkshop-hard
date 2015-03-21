@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="gameApp" ng-csp>
+<head>
+  <title>AngularJSWorkshopHard</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="angular.min.js"></script>
+  <script src="firebase.js"></script>
+  <script src="angularfire.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="controllers.js"></script>
+  <script src="services.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+  <div>
+    New Player Name:
+    <input ng-model="newName">
+    <button ng-click="create()">
+      Create
+    </button>
+  </div>
+  <p></p>
+  <div>{{playerList.length}} Players</div>
+  <div ng-repeat="player in playerList">
+    <button ng-click="increase(player)">+</button>
+    {{player.name}} - {{player.score}}
+  </div>
+
+</body>
+</html>
